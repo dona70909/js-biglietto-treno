@@ -31,7 +31,7 @@ if (isNaN(kmUser) || isNaN(ageUser)){
 
 /* CONVALIDA E RANDOM VALUE   */
 
-/* convalida dei dati : dati creati random se non sono giusti or non calcolo il prezzo direttamente  */
+/* convalida dei dati : dati creati random se non sono giusti */
 /* !convalida km */
 /* if(isNaN(kmUser)){
     kmUser = Math.floor(Math.random() * 100) + 1; 
