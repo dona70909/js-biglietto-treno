@@ -1,6 +1,6 @@
 /* User info const */
 let kmUser = parseFloat(prompt("Quanti km vuoi fare?"));
-let ageUser =parseFloat(prompt("Quanti anni hai?"));
+let ageUser = parseFloat(prompt("Quanti anni hai?"));
 let calcoloPrice = 0;
 const kmPrice = 0.21;
 const adultAge = 18;
@@ -13,7 +13,7 @@ document.getElementById("my-age").innerHTML = ageUser + (" anni");
 
 
 /* CONVALIDA E NON CALCOLA IL PREZZO */
-if (isNaN(kmUser) || isNaN(ageUser)){
+if ( (isNaN(kmUser) || isNaN(ageUser)) || ((kmUser < 0) || (kmUser > 1000)) || (ageUser < 0 ||ageUser > 130) ){
     document.getElementById("my-price").innerHTML = ("I Dati inserti non sono corretti. Non posso calcolare il prezzo.");
 } else if (ageUser <= adultAge){
     calcoloPrice = ((kmUser * kmPrice) - (((kmUser * kmPrice) * (20)) / 100)).toFixed(2);
