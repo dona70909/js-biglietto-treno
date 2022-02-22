@@ -6,20 +6,20 @@ const kmPrice = 0.21;
 
 
 /* display User info inside the html */
-document.getElementById("my-km").innerHTML = kmUser;
-document.getElementById("my-age").innerHTML = ageUser;
+document.getElementById("my-km").innerHTML = kmUser + (" km");
+document.getElementById("my-age").innerHTML = ageUser + (" anni");
 
 /* convalida dei dati : dati creati random se non sono giusti or non calcolo il prezzo direttamente  */
 /* !convalida km */
 if(isNaN(kmUser)){
     kmUser = Math.floor(Math.random() * 100) + 1; 
-    document.getElementById("my-km").innerHTML = ("km inseriti dal pc ") +  kmUser;
+    document.getElementById("my-km").innerHTML = ("km inseriti dal pc ") +  kmUser + (" km");
 } 
 
 /* !convalida age */
 if(isNaN(kmUser)){
     ageUser = Math.floor(Math.random() * 10) + 1; 
-    document.getE
+    document.getElementById("my-age").innerHTML = ageUser +(" anni");
 }
 
 calcoloPrice = (kmUser * kmPrice);
