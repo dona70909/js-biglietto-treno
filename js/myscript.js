@@ -34,6 +34,6 @@ if (ageUser <= adultAge){
     calcoloPrice = ((kmUser * kmPrice) - (((kmUser * kmPrice) * (40)) / 100)).toFixed(2);
     document.getElementById("my-price").innerHTML = ("OVER 65 PRICE ") + calcoloPrice + (" euro");
 } else{
-    calcoloPrice = (kmUser * kmPrice);
+    calcoloPrice = (kmUser * kmPrice).toFixed(2);
     document.getElementById("my-price").innerHTML = calcoloPrice + (" euro");
 }
