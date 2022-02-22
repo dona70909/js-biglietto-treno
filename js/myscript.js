@@ -6,11 +6,16 @@ const ageUser =parseFloat(prompt("Quanti anni hai?"));
 document.getElementById("my-km").innerHTML = kmUser;
 document.getElementById("my-age").innerHTML = ageUser;
 
-/* convalida dei dati */
+/* convalida dei dati : dati creati random se non sono giusti or non calcolo il prezzo direttamente  */
 /* !convalida km */
 if(isNaN(kmUser)){
-   kmUser = Math.floor(Math.random() * 100) + 1; 
+    kmUser = Math.floor(Math.random() * 100) + 1; 
     document.getElementById("my-km").innerHTML = ("km inseriti dal pc ") +  kmUser;
-    
+} 
+
+/* !convalida age */
+if(isNaN(kmUser)){
+    ageUser = Math.floor(Math.random() * 10) + 1; 
+    document.getElementById("my-km").innerHTML = ("Età aggiunta dal pc ") +  ageUser ("anni");
 } 
 
