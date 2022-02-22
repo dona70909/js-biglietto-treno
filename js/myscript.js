@@ -13,7 +13,7 @@ document.getElementById("my-age").innerHTML = ageUser + (" anni");
 
 
 /* CONVALIDA E NON CALCOLA IL PREZZO */
-if ( (isNaN(kmUser) || isNaN(ageUser)) || ((kmUser < 0) || (kmUser > 1000)) || (ageUser < 0 ||ageUser > 130) ){
+if ( (isNaN(kmUser) || isNaN(ageUser)) || ((kmUser < 0) || (kmUser > 1000)) || ((ageUser < 0) ||(ageUser > 130)) ){
     document.getElementById("my-price").innerHTML = ("I Dati inserti non sono corretti. Non posso calcolare il prezzo.");
 } else if (ageUser <= adultAge){
     calcoloPrice = ((kmUser * kmPrice) - (((kmUser * kmPrice) * (20)) / 100)).toFixed(2);
