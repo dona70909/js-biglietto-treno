@@ -1,8 +1,11 @@
 /* User info const */
 let kmUser = parseFloat(prompt("Quanti km vuoi fare?"));
 let ageUser =parseFloat(prompt("Quanti anni hai?"));
-let calcoloPrice;
+let calcoloPrice = 0;
 const kmPrice = 0.21;
+const adultAge = 18;
+const discountUnder = 0.2;
+const elderlyAge = 65;
 
 
 /* display User info inside the html */
@@ -17,11 +20,20 @@ if(isNaN(kmUser)){
 } 
 
 /* !convalida age */
-if(isNaN(kmUser)){
+if(isNaN(ageUser)){
     ageUser = Math.floor(Math.random() * 10) + 1; 
     document.getElementById("my-age").innerHTML = ageUser +(" anni");
 }
 
-calcoloPrice = (kmUser * kmPrice);
-document.getElementById("my-price").innerHTML = calcoloPrice + (" euro");
 
+
+if (ageUser <= adultAge){
+    calcoloPrice = ((kmUser * kmPrice) - (((kmUser * kmPrice) * (20)) / 100)).toFixed(2);
+    document.getElementById("my-price").innerHTML = ("UNDER 18 PRICE ") + calcoloPrice + (" euro");
+} else if(ageUser > elderlyAge){
+    calcoloPrice = ((kmUser * kmPrice) - (((kmUser * kmPrice) * (40)) / 100)).toFixed(2);
+    document.getElementById("my-price").innerHTML = ("OVER 65 PRICE ") + calcoloPrice + (" euro");
+} else{
+    calcoloPrice = (kmUser * kmPrice);
+    document.getElementById("my-price").innerHTML = calcoloPrice + (" euro");
+}
